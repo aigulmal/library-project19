@@ -11,15 +11,18 @@ import ru.itgirl.libraryproject.service.AuthorService;
 @RestController
 @RequiredArgsConstructor
 public class AuthorController {
-
     private final AuthorService authorService;
 
-//    @GetMapping("/author/{id}")
-//    AuthorDto getAuthorById(@PathVariable("id") Long id) {
-//        return authorService.getAuthorById(id);
-//    }
     @GetMapping("/author")
     AuthorDto getAuthorByName1(@RequestParam("name") String name) {
         return authorService.getAuthorByName1(name);
+    }
+    @GetMapping("/author/v2")
+    AuthorDto getAuthorByNameV2(@RequestParam("name") String name) {
+        return authorService.getAuthorByName2(name);
+    }
+    @GetMapping("/author/v3")
+    AuthorDto getAuthorByNameV3(@RequestParam("name") String name) {
+        return authorService.getAuthorByName3(name);
     }
 }

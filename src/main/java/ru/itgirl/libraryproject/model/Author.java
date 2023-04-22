@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -24,6 +25,6 @@ public class Author {
     private String surname;
 
     @ManyToMany(mappedBy = "authors")
-    private Set<Book> books;
+    private List<Book> books;
 
 }

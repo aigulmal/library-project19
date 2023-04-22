@@ -17,5 +17,5 @@ public class AuthorDto {
     private Long id;
     private String name;
     private String surname;
-    private Set<Book> books;
+    private List<BookDto> books;
 }
