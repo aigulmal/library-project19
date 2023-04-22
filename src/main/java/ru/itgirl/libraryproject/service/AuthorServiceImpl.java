@@ -21,12 +21,6 @@ import java.util.stream.Collectors;
 public class AuthorServiceImpl implements AuthorService {
 
     private final AuthorRepository authorRepository;
-
-//    @Override
-//    public AuthorDto getAuthorById(Long id) {
-//        Author author = authorRepository.findById(id).orElseThrow();
-//        return convertEntityToDto(author);
-//    }
     @Override
     public AuthorDto getAuthorByName1(String name) {
         Author author = authorRepository.findAuthorByName(name).orElseThrow();
